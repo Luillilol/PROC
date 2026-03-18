@@ -1,7 +1,7 @@
 /*
     Luillilol.
-    Rook
-    timeToSolve | 
+    1907A-Rook
+    31ms | 18-Mar-26
 */
 #include <bits/stdc++.h>
 #define fastIO() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
