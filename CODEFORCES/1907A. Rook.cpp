@@ -1,7 +1,7 @@
 /*
     Luillilol.
-    watermelon
-    timeToSolve | 17-03-26
+    Rook
+    timeToSolve | 
 */
 #include <bits/stdc++.h>
 #define fastIO() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -37,28 +37,31 @@ void setIO() {
     #endif
 }
 */
-void solve() {
+void solve() { //aqui va el codigo para cada posicion
+    string pos, lett ,num;
+    cin >> pos;
+    lett = pos[0]; //letra
+    num = pos[1]; // numero
+    string numbers[8]={"1", "2", "3", "4", "5", "6", "7", "8"};
+    string letters[8]{"a", "b", "c", "d", "e", "f", "g", "h"};    
+    //estructura para navegar entre todos los numeros con misma letra
+    fori(i, 0, 8){
+        if(num.compare(numbers[i]) != 0){
+            cout << lett<<numbers[i]<<"\n";
+        }
+    }
+    //estructura para navegar entre todos las letras con el mismo numero
+    fori(i, 0, 8){
+        if(lett.compare(letters[i]) != 0){
+            cout << letters[i]<<num<<"\n";
+        }
+    }
 }
-
 int main() {
     fastIO();
-    
-    int x;
-    cin >> x;
-    
-    if(x%2==0){
-        if(x == 0 || x == 2){
-            cout << "NO";
-            return 0;
-        }
-        cout << "YES ";
-        return 0;
-    }
-    cout << "NO";
-//    setIO();
-//    int t;
-//    cin >> t;
-//    while( t-- ) solve();
+    int t;
+    cin >> t;
+    while( t-- ) solve();
     return 0;
 }
 
