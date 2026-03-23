@@ -1,7 +1,7 @@
 /*
     Luillilol
-    A. QAQ
-    46ms | 23/mar/26
+    B. Two Arrays And Swaps
+    timeToSolve | date 
 */
 #include <bits/stdc++.h>
 #define fastIO() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -38,41 +38,16 @@ void setIO() {
 }
 */
 void solve() {
-    string input;
-    int lenQAQ, points=0;
-    cin >> input;
-    lenQAQ = input.length();
-    //cout << input << " " << lenQAQ<< endl;
-
-    //iterar sobre cada letra para encontrar Q
-    fori(i, 0, lenQAQ){
-        if(input[i] == 'Q'){
-            //cout << "Tiene q en i=" <<i<<endl;
-            fori(j, i, lenQAQ){
-                if(input[j] == 'A'){
-                    //cout << "Tiene A en j=" <<j<<endl;
-                    fori(k, j, lenQAQ){
-                        if(input[k] == 'Q'){
-                            //cout << "Tiene 2da Q en k=" <<k<<endl;
-                            points++;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    cout<<points;
-    
+    cout << "puto pendejo";
 }
 
 int main() {
     
     fastIO();
 //    setIO();
-    //int t;
-    //cin >> t;
-    //while( t-- ) solve();
-    solve();
+    int t;
+    cin >> t;
+    while( t-- ) solve();
     return 0;
 }
 
