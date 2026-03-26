@@ -1,7 +1,7 @@
 /*
     Luillilol
     B. Two Arrays And Swaps
-    timeToSolve | date 
+    31ms | 23-mar-26 
 */
 #include <bits/stdc++.h>
 #define fastIO() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -38,7 +38,56 @@ void setIO() {
 }
 */
 void solve() {
-    cout << "puto pendejo";
+    int auxvector, totalSum=0;
+    int k, lenvector, kCounter=0;
+    int aCounter, bCounter; //contadores para iterar en ambos vectores
+    
+    vector <int> aVector, bVector;
+
+    cin >> lenvector;
+    cin >> k;
+
+    //cout << lenvector << " "<< k << endl;
+
+    fori(i, 0, lenvector){
+        cin >> auxvector;
+        aVector.push_back(auxvector);
+    }
+    sort(aVector.begin(), aVector.end());
+    /*cout << "imprimiendo vector1" << endl;
+    for(int key:aVector){
+        cout << key << endl;
+    }*/
+    fori(i, 0, lenvector){
+        cin >> auxvector;
+        bVector.push_back(auxvector);
+    }
+    sort(bVector.begin(), bVector.end());
+    /*cout << "imprimiendo vector2" << endl;
+    for(int key:bVector){
+        cout << key << endl;
+    }*/
+
+    //revisar que el menor de a sea menor al maximo de b
+    aCounter=0;
+    bCounter = lenvector-1;
+    while(kCounter < k && aCounter<lenvector ){
+        if(aVector[aCounter] < bVector[bCounter]){
+            //cout << aVector[aCounter] << "es menor que " << bVector[bCounter];
+            swap(aVector[aCounter], bVector[bCounter]);
+            sort(aVector.begin(), aVector.end());
+            sort(bVector.begin(), bVector.end());
+            kCounter++;  
+        }else{
+            //cout << aVector[aCounter] << "NO es menor que " << bVector[bCounter];
+            aCounter++;
+            //cout << "aCounter= "<<aCounter;
+        }
+    }
+    for(int i:aVector){
+        totalSum += i;
+    }
+    cout << totalSum<<endl;
 }
 
 int main() {
