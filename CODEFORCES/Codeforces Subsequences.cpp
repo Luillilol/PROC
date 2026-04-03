@@ -1,6 +1,6 @@
 /*
     Luillilol
-    Problem name
+    Codeforces Subsequences
     timeToSolve | date
 */
 #include <bits/stdc++.h>
@@ -38,16 +38,26 @@ void setIO() {
 }
 */
 void solve() {
-    cout << "Hola";
+    ll subsequences;
+    string result = "codeforce";
+    cin >> subsequences;
+    //cout << subsequences <<endl;
+    fori(i, 0, subsequences){
+        result += 's';
+    }
+    cout << result;
+    
+
 }
 
 int main() {
     
     fastIO();
 //    setIO();
-    int t;
-    cin >> t;
-    while( t-- ) solve();
+    //int t;
+    //cin >> t;
+    //while( t-- ) solve();
+    solve();
     return 0;
 }
 

@@ -1,7 +1,7 @@
 /*
     Luillilol
-    Problem name
-    timeToSolve | date
+    YES or YES?
+    timeToSolve | 03-Apr-26
 */
 #include <bits/stdc++.h>
 #define fastIO() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -38,7 +38,35 @@ void setIO() {
 }
 */
 void solve() {
-    cout << "Hola";
+    string yesNoString;
+    bool correct = true;
+
+    cin >> yesNoString;
+
+    //cout << yesNoString << endl;
+    if(yesNoString[0] == 'Y' || yesNoString[0] == 'y'){
+        //cout << "primera cumple: " << yesNoString[0] << endl;
+    }else{
+        correct = false;
+    }
+
+    if(yesNoString[1] == 'E' || yesNoString[1] == 'e'){
+        //cout << "tercera cumple: " << yesNoString[1] << endl;
+    }else{
+        correct = false;
+    }
+
+    if(yesNoString[2] == 'S' || yesNoString[2] == 's'){
+        //cout << "tercera cumple: " << yesNoString[2] << endl;
+    }else{
+        correct = false;
+    }
+    
+    if(correct){
+        cout << "YES"<< endl;
+    }else{
+        cout << "NO"<< endl;
+    }
 }
 
 int main() {

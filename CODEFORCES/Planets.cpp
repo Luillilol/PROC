@@ -38,7 +38,48 @@ void setIO() {
 }
 */
 void solve() {
-    cout << "Hola";
+    int numberPlanets, costSecondMachine, auxPushBack, minimunCost = 0;
+    vector <int> orbits;
+
+    cin >> numberPlanets;
+    cin >> costSecondMachine;
+
+    int auxOrbs [numberPlanets];
+    //establecer cada indice en 0
+    fori(i, 0, numberPlanets){
+        auxOrbs[i] = 0;
+    }
+
+    fori(i, 0, numberPlanets){
+        cin >> auxPushBack;
+        orbits.PB(auxPushBack);
+        auxOrbs[auxPushBack-1] ++;
+    }
+
+    /*
+    for(int key:auxOrbs){
+        cout << key;
+    }
+    cout << endl;
+    */
+
+    // evaluar cual de las dos opciones es mejor
+    // Primera maquina -> destuir cada planeta 1 Pu
+    // Segunda maquina -> destruir toda la orbita N Pu
+    int costFirsMachine; // costSecondMachine
+    fori(i, 0, numberPlanets){
+        if(auxOrbs[i] != 0){
+            //calcular la primera forma
+            costFirsMachine = auxOrbs[i];
+            if(costFirsMachine > costSecondMachine){
+                minimunCost += costSecondMachine;
+            }else{
+                minimunCost += costFirsMachine;
+            }
+        }
+    }
+    cout << minimunCost << endl;
+
 }
 
 int main() {
