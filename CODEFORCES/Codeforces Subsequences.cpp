@@ -39,14 +39,34 @@ void setIO() {
 */
 void solve() {
     ll subsequences;
+    //      C       O       D       E       F       O       R       C       E      S
+    //int pos0=1, pos1=1, pos2=1, pos3=1, pos4=1, pos5=1, pos6=1, pos7=1, pos8=1, pos9=1;
+    int pos[10] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
     string result = "codeforce";
     cin >> subsequences;
     //cout << subsequences <<endl;
     fori(i, 0, subsequences){
         result += 's';
     }
-    cout << result;
+
+    //ir de poco a poco incrementando ++ a cada variable
+    // si la multiplicacion de todos da menor a subsequences, seguir con lo suyo
+    // si la multiplicacion se pasa
+    int i=0;
     
+    
+    
+    bool minorThan = true;
+    while (i<10){
+        if((pos[0]*pos[1]*pos[2]*pos[3]*pos[4]*pos[5]*pos[6]*pos[7]*pos[8]*pos[9] < subsequences ) && (minorThan)){
+            i++;            
+        }
+        if(i==10){
+            i==0;
+        }
+    }
+    
+
 
 }
 
