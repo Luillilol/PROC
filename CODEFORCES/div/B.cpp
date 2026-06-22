@@ -1,7 +1,7 @@
 /*
     Luillilol
-    Problem name
-    timeToSolve | date
+    Insomnia Cure
+    timeToSolve | 26 - Apr - 26
 */
 #include <bits/stdc++.h>
 #define fastIO() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -43,16 +43,41 @@ void setIO() {
     }*/
     //cout << endl;
 void solve() {
-    cout << "Hola";
+    int d;
+    vi castigos(4);
+
+    fori(i, 0, 4){
+        cin >> castigos[i];
+    }
+
+    /*for(int key:castigos){
+        cout << key << " ";
+    }*/
+    cin >> d;
+    //cout << endl<< d<< endl<< endl;
+    //cout << d;
+    int aux, mult;
+    set <int> repeat;
+    fori(i, 0, 4){
+        mult = 1;
+        aux = castigos[i];
+        //cout << (aux*mult)<< endl;
+        while((aux * mult) <= d){
+            repeat.insert(aux * mult);
+            mult ++ ;
+        }
+    }   
+    cout << repeat.size();
 }
 
 int main() {
     
     fastIO();
 //    setIO();
-    int t;
-    cin >> t;
-    while( t-- ) solve();
+    //int t;
+    //cin >> t;
+    //while( t-- ) solve();
+    solve();
     return 0;
 }
 

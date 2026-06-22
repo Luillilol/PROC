@@ -1,7 +1,7 @@
 /*
     Luillilol
-    Problem name
-    timeToSolve | date
+    Polycarp Training
+    timeToSolve | 22-Apr-26
 */
 #include <bits/stdc++.h>
 #define fastIO() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -43,16 +43,33 @@ void setIO() {
     }*/
     //cout << endl;
 void solve() {
-    cout << "Hola";
+    int n;
+    cin >> n;
+    vi contest(n);
+
+    fori(i, 0, n){
+        cin >> contest[i];
+    }
+    sort(contest.begin(), contest.end());
+    for(int key:contest){
+        cout << key << " ";
+    }
+    
+    
+
+
+
+
 }
 
 int main() {
     
     fastIO();
 //    setIO();
-    int t;
-    cin >> t;
-    while( t-- ) solve();
+    //int t;
+    //cin >> t;
+    //while( t-- ) solve();
+    solve();
     return 0;
 }
 

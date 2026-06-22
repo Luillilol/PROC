@@ -1,7 +1,7 @@
 /*
     Luillilol
-    Problem name
-    timeToSolve | date
+    Fun Permutation
+    timeToSolve | 26-apr-26
 */
 #include <bits/stdc++.h>
 #define fastIO() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -43,7 +43,21 @@ void setIO() {
     }*/
     //cout << endl;
 void solve() {
-    cout << "Hola";
+    int n;
+    cin >> n;
+    vector <int> answer(n);
+    
+    int aux, max;
+    max = n+1;
+    fori(i, 0, n){
+        cin >> aux;
+        answer[i] = max-aux;
+    }
+
+    for(int key:answer){
+        cout << key << " ";
+    }
+    cout << endl;
 }
 
 int main() {

@@ -43,7 +43,42 @@ void setIO() {
     }*/
     //cout << endl;
 void solve() {
-    cout << "Hola";
+
+    int n, k;
+    cin >> n >> k;
+
+    char matriz[n][n];
+    int aux;
+    
+    fori(i, 0, n){
+        fori(j, 0, n){
+            cin >> matriz[i][j];
+            //cout << matriz[i][j];
+        }
+    }
+
+    /*fori(i, 0, n){
+        fori(j, 0, n){
+            cout << matriz[i][j];
+        }
+        cout << endl;
+    }*/
+
+    char matrizResultante[n/k][n/k];
+    int x=0, y=0;
+
+    for(int i = 0; i <(n/k) ; i++){
+        for(int j = 0 ; j < (n/k) ; j++){
+            matrizResultante[i][j] = matriz[x][y]; 
+            y = y + k;
+        }
+        
+    }
+    
+    
+    
+
+
 }
 
 int main() {

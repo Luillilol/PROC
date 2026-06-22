@@ -42,8 +42,30 @@ void setIO() {
         cout << key << " ";
     }*/
     //cout << endl;
+
+char chart;
 void solve() {
-    cout << "Hola";
+    int n;
+    cin >> n;
+    vector<int> notes(n);
+
+    fori(i, 0, n){
+        int counter = 0;
+        fori(j, 0, 4){
+            cin >> chart;
+            counter ++ ;
+            //cout << chart;
+            if(chart == '#'){
+                notes[i] = counter;
+            }
+        }
+        //cout << endl;
+    }
+    for(int k=n-1 ; k >= 0 ; k--){
+        cout << notes[k] << " ";
+    }
+    cout << endl;
+
 }
 
 int main() {

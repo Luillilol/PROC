@@ -43,7 +43,16 @@ void setIO() {
     }*/
     //cout << endl;
 void solve() {
-    cout << "Hola";
+    
+    char primero, segundo;
+    cin >> primero >> segundo;
+    int intPrimero, intSegundo;
+    intPrimero = primero - '0';
+    intSegundo = segundo - '0';
+
+    cout << (intPrimero + intSegundo)<<endl;
+
+    //cout << intPrimero << endl <<intSegundo<<endl;
 }
 
 int main() {

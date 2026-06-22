@@ -1,7 +1,7 @@
 /*
     Luillilol
-    Problem name
-    timeToSolve | date
+    Prepend and Append
+    timeToSolve | 26 - Apr - 26 
 */
 #include <bits/stdc++.h>
 #define fastIO() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -43,7 +43,48 @@ void setIO() {
     }*/
     //cout << endl;
 void solve() {
-    cout << "Hola";
+    bool ola = true;
+    int n;
+    string timurs;
+    cin >> n;
+    cin >> timurs;
+
+    int inicio, ultimo, distancia;
+    inicio = 0;
+    ultimo = n -1;
+    while(true){
+        if( (timurs[inicio] != timurs[ultimo]) && (inicio<=ultimo)){
+            inicio++;
+            ultimo--;
+        }else{
+            distancia = (ultimo-inicio) + 1;
+            break;
+        }
+    }
+    cout << distancia<<endl;
+
+
+
+
+    //cout << timurs.size();
+    //string primero, ultimo;
+    //cout << timurs.front();
+    /*if(timurs.size() > 1){
+        while(ola && timurs.size() > 0){
+            primero = timurs.front();
+            ultimo =  timurs.back();
+            if(primero != ultimo){
+                timurs.erase(0, 1);
+                timurs.pop_back();
+            }else{
+                ola = false;
+            }
+        }
+        
+    }*/
+
+
+
 }
 
 int main() {

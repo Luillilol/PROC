@@ -1,7 +1,7 @@
 /*
     Luillilol
-    Problem name
-    timeToSolve | date
+    Magnets
+    timeToSolve | 26-Apr-26
 */
 #include <bits/stdc++.h>
 #define fastIO() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
@@ -43,16 +43,33 @@ void setIO() {
     }*/
     //cout << endl;
 void solve() {
-    cout << "Hola";
+    int n;
+    cin >> n;
+    int contador=1;
+    string actual, siguiente;
+    cin >>actual;
+    if(n>1){
+        fori(i, 1, n){
+            cin>> siguiente;
+            //cout << der<<" " << izq2 <<endl; 
+            if(actual[1] == siguiente[0]){
+                contador++;
+            }
+            actual = siguiente;
+        }
+    }
+    cout <<contador;
+
 }
 
 int main() {
     
     fastIO();
 //    setIO();
-    int t;
-    cin >> t;
-    while( t-- ) solve();
+    //int t;
+    //cin >> t;
+    //while( t-- ) solve();
+    solve();
     return 0;
 }
 
